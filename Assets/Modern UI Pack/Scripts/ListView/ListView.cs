@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Michsky.UI.ModernUIPack
@@ -77,6 +78,16 @@ namespace Michsky.UI.ModernUIPack
 
             if (showScrollbar == false && scrollbar != null) { scrollbar.transform.localScale = new Vector3(0, 0, 0); }
             else if (showScrollbar == true && scrollbar != null) { scrollbar.transform.localScale = new Vector3(1, 1, 1); }
+        }
+
+        public void ResetList()
+        {
+            listItems.Clear();
+            foreach (Transform t in itemParent) {
+ 
+                Destroy(t.GameObject());
+ 
+            }
         }
     }
 }

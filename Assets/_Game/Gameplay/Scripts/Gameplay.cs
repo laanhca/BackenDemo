@@ -19,6 +19,7 @@ public class Gameplay : MonoBehaviour
 
     [SerializeField] private Button btnSavePoint;
     [SerializeField] private Button btnLeaderboard;
+    [SerializeField] private Button btnCloseLeaderboard;
 
     [SerializeField] private ListView listLeaderboard;
     
@@ -35,6 +36,13 @@ public class Gameplay : MonoBehaviour
         Movement.OnMovement += OnPlayerMove;
         btnSavePoint.onClick.AddListener(OnBtnSaveClick);
         btnLeaderboard.onClick.AddListener(OnBtnLeaderboardClick);
+        btnCloseLeaderboard.onClick.AddListener(OnBtnCloseLeaderboardClick);
+    }
+
+    private void OnBtnCloseLeaderboardClick()
+    {
+        listLeaderboard.ResetList();
+
     }
 
     private void OnBtnLeaderboardClick()
