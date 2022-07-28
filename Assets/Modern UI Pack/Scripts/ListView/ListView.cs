@@ -14,7 +14,7 @@ namespace Michsky.UI.ModernUIPack
         // Settings
         public bool initializeOnAwake = true;
         public bool showScrollbar = true;
-        public RowCount rowCount = RowCount.Two;
+        public RowCount rowCount = RowCount.Three;
 
         // Item list
         [SerializeField]
